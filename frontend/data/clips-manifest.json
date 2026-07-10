@@ -1,0 +1,46 @@
+{
+  "clips": [
+    {
+      "id": "video_1",
+      "label": "Video 1",
+      "raw_url": "/assests/raw/Video_1.mp4",
+      "inferenced_url": "/assests/inferenced/Video_1.mp4",
+      "thumb_url": "/assests/thumbs/Video_1.jpg"
+    },
+    {
+      "id": "video_2",
+      "label": "Video 2",
+      "raw_url": "/assests/raw/Video_2.mp4",
+      "inferenced_url": "/assests/inferenced/Video_2.mp4",
+      "thumb_url": "/assests/thumbs/Video_2.jpg"
+    },
+    {
+      "id": "video_3",
+      "label": "Video 3",
+      "raw_url": "/assests/raw/Video_3.mp4",
+      "inferenced_url": "/assests/inferenced/Video_3.mp4",
+      "thumb_url": "/assests/thumbs/Video_3.jpg"
+    },
+    {
+      "id": "video_4",
+      "label": "Video 4",
+      "raw_url": "/assests/raw/Video_4.mp4",
+      "inferenced_url": "/assests/inferenced/Video_4.mp4",
+      "thumb_url": "/assests/thumbs/Video_4.jpg"
+    },
+    {
+      "id": "video_5",
+      "label": "Video 5",
+      "raw_url": "/assests/raw/Video_5.mp4",
+      "inferenced_url": "/assests/inferenced/Video_5.mp4",
+      "thumb_url": "/assests/thumbs/Video_5.jpg"
+    },
+    {
+      "id": "video_6",
+      "label": "Video 6",
+      "raw_url": "/assests/raw/Video_6.mp4",
+      "inferenced_url": "/assests/inferenced/Video_6.mp4",
+      "thumb_url": "/assests/thumbs/Video_6.jpg"
+    }
+  ]
+}
