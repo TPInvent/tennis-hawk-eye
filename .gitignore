@@ -9,3 +9,6 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Video assets (hosted on Cloudflare R2, not in git)
+assests/
