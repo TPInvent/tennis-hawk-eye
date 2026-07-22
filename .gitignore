@@ -12,3 +12,7 @@ Thumbs.db
 
 # Video assets (hosted on Cloudflare R2, not in git)
 assests/
+
+# Wrangler local dev cache
+node_modules/
+.wrangler/

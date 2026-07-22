@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawk-Eye Control Room</title>
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="site-body">
+    <!-- Abstract background elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Persistent header -->
+    <header class="site-header">
+        <div class="brand">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M6 12A6 6 0 0 1 18 12" />
+                <path d="M12 6A6 6 0 0 0 12 18" />
+            </svg>
+            <span class="brand-name">HAWK-EYE</span>
+            <span class="brand-tag">CONTROL ROOM</span>
+        </div>
+        <a class="btn btn-secondary btn-sm" href="index.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            Back to Presentation
+        </a>
+    </header>
+
+    <main class="site-main">
+        <!-- ============================= CONTROL ROOM ============================= -->
+        <section class="tab-panel" id="panel-control-room">
+            <div class="control-room">
+                <!-- Left rail: clip cards -->
+                <aside class="clip-rail">
+                    <h2 class="rail-title">Clip Library</h2>
+                    <p class="rail-hint">Drag a clip into the monitor, or click to load it.</p>
+                    <div class="clip-list" id="clip-list">
+                        <!-- Clip cards injected by control-room.js -->
+                        <div class="rail-loading" id="rail-loading">Loading clips&hellip;</div>
+                    </div>
+                </aside>
+
+                <!-- Center monitor -->
+                <div class="monitor-wrapper">
+                    <div class="monitor" id="monitor" aria-live="polite">
+                        <!-- Idle state -->
+                        <div class="monitor-state monitor-idle" id="monitor-idle">
+                            <svg class="monitor-idle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg>
+                            <p class="monitor-idle-text">Drag a clip in to begin analysis</p>
+                            <p class="monitor-idle-sub">or click a card on the left</p>
+                        </div>
+
+                        <!-- Video -->
+                        <video id="monitor-video" playsinline muted></video>
+
+                        <!-- Analysis overlay -->
+                        <div class="analysis-overlay" id="analysis-overlay" hidden>
+                            <div class="scan-line"></div>
+                            <div class="analysis-hud">
+                                <span class="analysis-status" id="analysis-status">Loading frames&hellip;</span>
+                                <div class="analysis-bar">
+                                    <div class="analysis-bar-fill" id="analysis-bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reveal badge -->
+                        <div class="reveal-badge" id="reveal-badge" hidden>ANALYSIS COMPLETE</div>
+
+                        <!-- Error state -->
+                        <div class="monitor-state monitor-error" id="monitor-error" hidden>
+                            <span class="error-badge">SIGNAL LOST</span>
+                            <p class="monitor-error-text" id="monitor-error-text">Could not load this clip.</p>
+                        </div>
+                    </div>
+
+                    <div class="monitor-controls">
+                        <span class="monitor-label" id="monitor-label">No clip loaded</span>
+                        <button class="btn btn-primary btn-sm" id="new-clip-btn" disabled>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                            New Clip
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/control-room.js"></script>
+    <script>ControlRoom.init();</script>
+</body>
+</html>

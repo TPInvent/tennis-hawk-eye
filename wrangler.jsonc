@@ -1,6 +1,7 @@
 {
   "name": "tennis-hawk-eye",
   "compatibility_date": "2026-07-11",
+  "account_id": "029f8fe2c882b3115ae29d75838227f6",
   "assets": {
     "directory": "./frontend"
   }
